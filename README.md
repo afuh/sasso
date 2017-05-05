@@ -1,11 +1,29 @@
 # Sasso
 
-From The Odin Project's [curriculum](http://www.theodinproject.com/courses/html5-and-css3/lessons/design-your-own-grid-based-framework)
-
-## NPM
+#### NPM
 
 ```shell
-$ npm i --save sasso
+$ npm i --save-dev sasso
+```
+
+#### gulpfile.js
+```javascript
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+
+gulp.task('sass', function () {
+  return gulp.src('./sass/**/*.scss')
+    .pipe(sass({
+      includePaths: require('sasso').includePaths
+    }).on('error', sass.logError))
+    .pipe(gulp.dest('./css'));
+});
+
+```
+
+#### main.sass
+```sass
+@import 'sasso'
 ```
 
 ### Usage

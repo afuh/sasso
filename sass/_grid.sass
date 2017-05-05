@@ -1,0 +1,13 @@
+// ================ Grid ================ //
+
+=container($flex: row)
+  display: flex
+  @if $flex == row
+    flex-flow: row wrap
+  @else if $flex == col
+    height: 100%
+    flex-flow: column wrap
+  @content
+
+=size($col: 1, $total: 12)
+  flex-basis: percentage($col/$total)

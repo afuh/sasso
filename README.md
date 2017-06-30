@@ -6,8 +6,8 @@
 $ npm i -D sasso
 ```
 
-#### main.sass
-```sass
+#### main.js
+```js
 @import 'sasso'
 ```
 
@@ -20,26 +20,26 @@ Holy Grail Layout example
 main
   @extend .row
   nav
-    +size(1, 8)
+    +grid(1, 8)
     @extend .col
   article
-    +size(5, 8)
+    +grid(5, 8)
   aside
-    +size(2, 8)
+    +grid(2, 8)
 ```
 
 ```scss
 main {
   @extend .row;
   nav {
-    @include size(3, 12);
+    @include grid(3, 12);
     @extend .col;
   }
   article {
-    @include size(6, 12);
+    @include grid(6, 12);
   }
   aside {
-    @include size(3, 12);
+    @include grid(3, 12);
   }
 }
 ```    
@@ -71,13 +71,13 @@ main
   +break(sm)
     flex-flow: column
   nav
-    +size(1, 8)
+    +grid(1, 8)
     +break(xs)
       display: none
   article
-    +size(5, 8)
+    +grid(5, 8)
   aside
-    +size(2, 8)
+    +grid(2, 8)
 ```
 
 
@@ -120,6 +120,21 @@ header
 footer
   ul
     +footer(flex-start)    
+```
+#### Helpers
+```sass
++size(100%, auto)
+// width & height
+
++position(center, center)
+// flex justify-content & align-items
+
++font(16px, 200)
+// font-size & font-weight
+
++b(green)
+// border: 2px solid green
+// default color red
 ```
 #### Resets
 [Normalize.css](https://necolas.github.io/normalize.css/) is included

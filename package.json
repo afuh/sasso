@@ -2,7 +2,7 @@
   "name": "sasso",
   "version": "1.0.4",
   "description": "Simple sass framework",
-  "main": "index.js",
+  "main": "sasso.sass",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

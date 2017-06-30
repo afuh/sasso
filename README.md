@@ -3,22 +3,7 @@
 #### NPM
 
 ```shell
-$ npm i --save-dev sasso
-```
-
-#### gulpfile.js
-```javascript
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-
-gulp.task('sass', function () {
-  return gulp.src('./sass/**/*.scss')
-    .pipe(sass({
-      includePaths: require('sasso').includePaths
-    }).on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
-});
-
+$ npm i -D sasso
 ```
 
 #### main.sass
@@ -137,4 +122,4 @@ footer
     +footer(flex-start)    
 ```
 #### Resets
-Use [Normalize.css](https://necolas.github.io/normalize.css/)
+[Normalize.css](https://necolas.github.io/normalize.css/) is included

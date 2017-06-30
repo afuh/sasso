@@ -6,9 +6,10 @@
 $ npm i -D sasso
 ```
 
-#### main.js
-```js
-@import 'sasso'
+#### main.sass
+With Webpack
+```sass
+@import ~sasso/sasso.sass
 ```
 
 ### Usage

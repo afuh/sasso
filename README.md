@@ -43,7 +43,22 @@ main {
     @include grid(3, 12);
   }
 }
-```    
+```  
+By default the `margin` (set as the gutter between grids) is `0`.
+In order to increase it, `grid()` can receive a third argument.
+```sass
+main
+  +grid(1, 2, 1)
+// That would be a two columns grid:   
+// flex-basis: 49%
+// margin: 0.5%  
+
+main
+  +grid(1, 3, 0.6)
+// Three columns grid:   
+// flex-basis: 33%
+// margin: 0.15%    
+```
 
 #### Breakpoints & Media queries
 

@@ -1,6 +1,6 @@
 {
   "name": "sasso",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Simple sass framework",
   "main": "sasso.sass",
   "scripts": {

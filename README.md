@@ -13,10 +13,8 @@ With Webpack
 ```
 
 ### Usage
-#### Flexbox Grid
 
-Holy Grail Layout example
-
+**Sass**
 ```sass
 main
   @extend .row
@@ -29,6 +27,7 @@ main
     +grid(2, 8)
 ```
 
+**Scss**
 ```scss
 main {
   @extend .row;

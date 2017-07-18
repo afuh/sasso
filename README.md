@@ -141,10 +141,11 @@ footer
 +size(100%, auto)
 // width & height
 
-+position(center, center)
-// or
-@extend .centrate
++position(space-around, center)
 // flex justify-content & align-items
+
+@extend .centrate
+// extends to +position(center, center)
 
 +font(16px, 200)
 // font-size & font-weight

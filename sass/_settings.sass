@@ -50,6 +50,15 @@ button
   +list-row
 
 // ================ Grid ================ //
+
+=container($flex: row)
+  display: flex
+  @if $flex == row
+    flex-flow: row wrap
+  @else if $flex == col
+    flex-flow: column wrap
+  @content
+
 .row
   +container(row)
 
@@ -69,7 +78,7 @@ $shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08)
 
 .centrate
   +position(center, center)
-  
+
 =font($size, $weight)
   font-size: $size
   font-weight: $weight

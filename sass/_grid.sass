@@ -1,14 +1,5 @@
 // ================ Grid ================ //
 
-=container($flex: row)
-  display: flex
-  @if $flex == row
-    flex-flow: row wrap
-  @else if $flex == col
-    height: 100%
-    flex-flow: column wrap
-  @content
-
 =grid($col: 1, $total: 12, $gutter: 0)
   $gut: percentage($gutter/100)/2
   $grid: percentage($col/$total)

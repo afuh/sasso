@@ -1,7 +1,13 @@
 // ================ Grid ================ //
 
+@function convert($value)
+  $num: $value / ($value * 0 + 1)
+  @return $num * 8 + 0px
+
 =grid($col: 1, $total: 12, $gutter: 0)
-  $gut: percentage($gutter/100)/2
   $grid: percentage($col/$total)
+  $gut: percentage($gutter/200)
   margin: $gut
   flex-basis: $grid - $gutter
+  @-moz-document url-prefix()
+    margin: convert($gut)
